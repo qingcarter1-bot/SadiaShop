@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SadiaShop – Articles islamiques</title>
+<meta name="description" content="SadiaShop : tapis de prière, Corans, chapelets, parfums et bakhoor. Commandez facilement sur WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="sticky top-0 z-40 backdrop-blur border-b" style="background:color-mix(in srgb,var(--bg) 88%,transparent);border-color:var(--line)">
+  <div class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
+    <a href="#accueil" class="serif text-2xl font-bold" style="color:var(--brass)">Sadia<span style="color:var(--ink)">Shop</span></a>
+    <nav class="hidden md:flex gap-7 text-sm font-medium">
+      <a href="#accueil" class="hover:opacity-70">Accueil</a>
+      <a href="#categories" class="hover:opacity-70">Catégories</a>
+      <a href="#produits" class="hover:opacity-70">Produits</a>
+      <a href="#avantages" class="hover:opacity-70">Avantages</a>
+      <a href="#contact" class="hover:opacity-70">Contact</a>
+    </nav>
+    <a href="#contact" class="btn btn-brass hidden md:inline-flex text-sm">Commander</a>
+    <button id="menuBtn" class="md:hidden p-2" aria-label="Menu">
+      <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h18M4 13h18M4 19h18"/></svg>
+    </button>
+  </div>
+  <nav id="mobileMenu" class="hidden md:hidden px-5 pb-4 flex flex-col gap-3 text-sm font-medium">
+    <a href="#accueil">Accueil</a><a href="#categories">Catégories</a><a href="#produits">Produits</a><a href="#avantages">Avantages</a><a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+<!-- HERO -->
+<section id="accueil" class="pattern relative overflow-hidden" style="background-color:var(--green);color:#faf6ec">
+  <svg class='float absolute top-6 right-5 md:right-16 w-16 h-16 md:w-24 md:h-24 pointer-events-none' viewBox='0 0 100 100'><path d='M62 10a40 40 0 1 0 28 62A32 32 0 0 1 62 10z' fill='#d4ac55'/><path d='M80 18l2 5 5 1-4 3 1 5-4-3-4 3 1-5-4-3 5-1z' fill='#d4ac55'/></svg>
+  <div class="hero-in max-w-6xl mx-auto px-5 py-20 md:py-28 text-center">
+    <p class="uppercase tracking-[.25em] text-xs mb-4" style="color:#d4ac55">Bienvenue chez SadiaShop</p>
+    <h1 class="serif text-4xl md:text-6xl font-bold leading-tight">Les essentiels de votre foi,<br>élégants et authentiques</h1>
+    <p class="mt-5 max-w-xl mx-auto opacity-90">Tapis de prière, Corans, chapelets, parfums et bien plus. Des articles soigneusement choisis, livrés chez vous.</p>
+    <div class="mt-8 flex flex-wrap gap-3 justify-center">
+      <a href="#produits" class="btn btn-brass">Voir les produits</a>
+      <a data-wa="Bonjour SadiaShop, je souhaite passer commande." href="#" class="btn btn-line">WhatsApp</a>
+    </div>
+  </div>
+<svg class='absolute bottom-0 left-0 w-full pointer-events-none' style='height:70px;fill:var(--bg)' viewBox='0 0 1200 120' preserveAspectRatio='none'><path d='M0 120V95h120V80q0-40 40-40t40 40v15h60V50l8-30 8 30v45h80V85q0-55 60-55t60 55v10h40V60l8-40 8 40v35h70V80q0-35 38-35t38 35v15h140V55l8-30 8 30v40h60V85q0-50 50-50t50 50v10h130V70l8-35 8 35v25h60V120z'/></svg>
+</section>
+
+<!-- CATEGORIES -->
+<section id="categories" class="max-w-6xl mx-auto px-5 py-16">
+  <h2 class="serif text-3xl md:text-4xl font-bold text-center">Nos catégories</h2>
+  <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+    <a href="#produits" class="card p-6"><div data-art="Tapis"></div><p class="mt-3 font-semibold">Tapis de prière</p></a>
+    <a href="#produits" class="card p-6"><div data-art="Corans"></div><p class="mt-3 font-semibold">Corans</p></a>
+    <a href="#produits" class="card p-6"><div data-art="Chapelets"></div><p class="mt-3 font-semibold">Chapelets</p></a>
+    <a href="#produits" class="card p-6"><div data-art="Parfums"></div><p class="mt-3 font-semibold">Parfums &amp; Bakhoor</p></a>
+  </div>
+</section>
+
+<!-- PRODUITS -->
+<section id="produits" class="py-16" style="background:color-mix(in srgb,var(--brass) 8%,var(--bg))">
+  <div class="max-w-6xl mx-auto px-5">
+    <h2 class="serif text-3xl md:text-4xl font-bold text-center">Nos produits phares</h2>
+    <p class="text-center mt-2" style="color:var(--muted)">Cliquez sur « Commander » pour nous écrire directement sur WhatsApp.</p>
+    <div class="flex flex-wrap gap-2 justify-center mt-8" id="filters"></div>
+    <div id="grid" class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+  </div>
+</section>
+
+<!-- AVANTAGES -->
+<section id="avantages" class="max-w-6xl mx-auto px-5 py-16">
+  <h2 class="serif text-3xl md:text-4xl font-bold text-center">Pourquoi SadiaShop ?</h2>
+  <div class="mt-10 grid md:grid-cols-3 gap-6 text-center">
+    <div class="card p-7"><div class="text-4xl">✨</div><h3 class="mt-3 font-semibold">Qualité garantie</h3><p class="mt-2 text-sm" style="color:var(--muted)">Des articles sélectionnés pour leur finition et leur durabilité.</p></div>
+    <div class="card p-7"><div class="text-4xl">🚚</div><h3 class="mt-3 font-semibold">Livraison rapide</h3><p class="mt-2 text-sm" style="color:var(--muted)">Livraison à Abidjan et expédition dans tout le pays.</p></div>
+    <div class="card p-7"><div class="text-4xl">💬</div><h3 class="mt-3 font-semibold">Service à l'écoute</h3><p class="mt-2 text-sm" style="color:var(--muted)">Une question ? Nous répondons vite sur WhatsApp.</p></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="pattern" style="background-color:var(--green);color:#faf6ec">
+  <div class="max-w-3xl mx-auto px-5 py-16 text-center">
+    <h2 class="serif text-3xl md:text-4xl font-bold">Passez commande</h2>
+    <p class="mt-3 opacity-90">Écrivez-nous, nous vous répondons dans les meilleurs délais.</p>
+    <div class="mt-8 flex flex-wrap gap-3 justify-center">
+      <a data-wa="Bonjour SadiaShop, j'aimerais avoir plus d'informations." href="#" class="btn btn-brass">WhatsApp</a>
+      <a href="tel:+2250566104520" class="btn btn-line">Appeler</a>
+    </div>
+    <p class="mt-6 text-sm opacity-80">📍 Abidjan, Côte d'Ivoire · 🕘 Lun–Sam, 8h–19h</p>
+  </div>
+</section>
+</main>
+
+<footer class="text-center text-sm py-8" style="color:var(--muted)">
+  © <span id="year"></span> SadiaShop. Tous droits réservés.
+</footer>
+
+<!-- Bouton WhatsApp flottant -->
+<a data-wa="Bonjour SadiaShop !" href="#" aria-label="WhatsApp" class="pulse fixed right-5 z-50 w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-lg" style="background:#25d366;bottom:calc(1.25rem + env(safe-area-inset-bottom,0px))">💬</a>
+
+<script src="script.js"></script>
+</body>
+</html>
